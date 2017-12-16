@@ -192,5 +192,205 @@ namespace Calculator
                 this.timer1.Stop();
             }
         }
+
+        /// <summary>
+        /// 关于
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About m_About = new About();
+            m_About.ShowInTaskbar = false;
+            m_About.ShowDialog();
+        }
+
+        /// <summary>
+        /// 设置TextBox1的值
+        /// </summary>
+        /// <param name="ButtonName"></param>
+        private void SetTextBox1_Text(String ControlName)
+        {
+            this.textBox1.AppendText(ControlName);
+        }
+
+        /// <summary>
+        /// 设置TextBox2的值
+        /// </summary>
+        /// <param name="ButtonName"></param>
+        private void SetTextBox2_Text(String ControlName)
+        {
+            this.textBox2.AppendText(ControlName);
+        }
+
+        /// <summary>
+        /// 清空TextBox1
+        /// </summary>
+        private void ClearTextBox1_Text()
+        {
+            this.textBox1.Text = "";
+        }
+
+        /// <summary>
+        /// 清空TextBox2
+        /// </summary>
+        private void ClearTextBox2_Text()
+        {
+            this.textBox2.Text = "";
+        }
+
+        /// <summary>
+        /// 0
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button28_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button28.Text);
+        }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button25_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button25.Text);
+        }
+
+        /// <summary>
+        /// 2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button24_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button24.Text);
+        }
+
+        /// <summary>
+        /// 3
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button23_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button23.Text);
+        }
+
+        /// <summary>
+        /// 4
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button20.Text);
+        }
+
+        /// <summary>
+        /// 5
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button19.Text);
+        }
+
+        /// <summary>
+        /// 6
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button18.Text);
+        }
+
+        /// <summary>
+        /// 7
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button15.Text);
+        }
+
+        /// <summary>
+        /// 8
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false; }
+            SetTextBox2_Text(this.button14.Text);
+        }
+
+        /// <summary>
+        /// 9
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (Clear_Form_Order) { ClearTextBox2_Text(); Clear_Form_Order = false;}
+            SetTextBox2_Text(this.button13.Text + this.button13.Text);
+        }
+
+        /// <summary>
+        /// +
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button26_Click(object sender, EventArgs e)
+        {
+            SetTextBox1_Text(this.textBox2.Text + this.button26.Text);
+            Clear_Form_Order = true;
+        }
+
+        /// <summary>
+        /// -
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button22_Click(object sender, EventArgs e)
+        {
+            SetTextBox1_Text(this.textBox2.Text + this.button22.Text);
+            Clear_Form_Order = true;
+        }
+
+        /// <summary>
+        /// *
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button17_Click(object sender, EventArgs e)
+        {
+            SetTextBox1_Text(this.textBox2.Text + this.button17.Text);
+            Clear_Form_Order = true;
+        }
+
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button12_Click(object sender, EventArgs e)
+        {
+            SetTextBox1_Text(this.textBox2.Text + this.button12.Text);
+            Clear_Form_Order = true;
+        }
     }
 }
