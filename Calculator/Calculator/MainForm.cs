@@ -392,5 +392,17 @@ namespace Calculator
             SetTextBox1_Text(this.textBox2.Text + this.button12.Text);
             Clear_Form_Order = true;
         }
+
+        /// <summary>
+        /// =
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button21_Click(object sender, EventArgs e)
+        {
+            this.textBox2.Text =  Controller.GetInstance().Result(this.textBox1.Text + this.textBox2.Text).ToString();
+            this.textBox1.Text = "";
+            Clear_Form_Order = true;
+        }
     }
 }

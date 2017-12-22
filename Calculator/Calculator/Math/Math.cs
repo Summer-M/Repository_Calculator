@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Math
-{
-    class Mathematics
-    {
+namespace Calculator.Math{
+
+    class Mathematics{
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -20,8 +20,7 @@ namespace Calculator.Math
         /// <param name="a">第一个类型为T的数字</param>
         /// <param name="b">第二个类型为T的数字</param>
         /// <returns>返回T类型的加法结果</returns>
-        public static T Add<T>(T a, T b) where T : struct
-        {
+        public static T Add<T>(T a, T b) where T : struct{
             dynamic d1 = a;
             dynamic d2 = b;
             return (T)(d1 + d2);
@@ -34,8 +33,7 @@ namespace Calculator.Math
         /// <param name="a">第一个类型为T的数字</param>
         /// <param name="b">第二个类型为T的数字</param>
         /// <returns>返回T类型的减法结果</returns>
-        public static T Subtraction<T>(T a, T b) where T : struct
-        {
+        public static T Subtraction<T>(T a, T b) where T : struct{
             dynamic d1 = a;
             dynamic d2 = b;
             return (T)(d1 - d2);
@@ -48,8 +46,7 @@ namespace Calculator.Math
         /// <param name="a">第一个类型为T的数字</param>
         /// <param name="b">第二个类型为T的数字</param>
         /// <returns>返回T类型的乘法结果</returns>
-        public static T Multiplication<T>(T a, T b) where T : struct
-        {
+        public static T Multiplication<T>(T a, T b) where T : struct {
             dynamic d1 = a;
             dynamic d2 = b;
             return (T)(d1 * d2);
@@ -62,18 +59,15 @@ namespace Calculator.Math
         /// <param name="a">第一个类型为T的数字</param>
         /// <param name="b">第二个类型为T的数字</param>
         /// <returns>返回T类型的除法结果</returns>
-        public static T Division<T>(T a, T b) where T : struct
-        {
+        public static T Division<T>(T a, T b) where T : struct{
             dynamic d1 = a;
             dynamic d2 = b;
             dynamic d3 = -1;
 
-            try
-            {
+            try{
                 d3 = (T)(d1 / d2);
             }
-            catch (Exception e)
-            {
+            catch (Exception e){
                 Console.WriteLine(e.ToString());
             }
 
@@ -86,8 +80,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的求根结果</returns>
-        public static T Sqrt<T>(T a) where T : struct
-        {
+        public static T Sqrt<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Sqrt(d1);
         }
@@ -98,8 +91,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的Sin结果</returns>
-        public static T Sin<T>(T a) where T : struct
-        {
+        public static T Sin<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Sin(d1);
         }
@@ -110,8 +102,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的Sin结果</returns>
-        public static T ArcSin<T>(T a) where T : struct
-        {
+        public static T ArcSin<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Asin(d1);
         }
@@ -122,8 +113,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的ArcSin结果</returns>
-        public static T Cos<T>(T a) where T : struct
-        {
+        public static T Cos<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Cos(d1);
         }
@@ -134,8 +124,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的ArcCos结果</returns>
-        public static T ArcCos<T>(T a) where T : struct
-        {
+        public static T ArcCos<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Acos(d1);
         }
@@ -146,8 +135,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的Cos结果</returns>
-        public static T Tan<T>(T a) where T : struct
-        {
+        public static T Tan<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Tan(d1);
         }
@@ -158,8 +146,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的ArcTan结果</returns>
-        public static T ArcTan<T>(T a) where T : struct
-        {
+        public static T ArcTan<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Atan(d1);
         }
@@ -170,8 +157,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的平方结果</returns>
-        public static T Square<T>(T a) where T : struct
-        {
+        public static T Square<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Tan(d1 * d1);
         }
@@ -182,8 +168,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的立方结果</returns>
-        public static T Cube<T>(T a) where T : struct
-        {
+        public static T Cube<T>(T a) where T : struct{
             dynamic d1 = a;
             return System.Math.Tan(d1 * d1 * d1);
         }
@@ -194,8 +179,7 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的立方结果</returns>
-        public static T Pow<T>(T a, T exponential) where T : struct
-        {
+        public static T Pow<T>(T a, T exponential) where T : struct{
             dynamic d1 = a;
             dynamic d2 = exponential;
             return System.Math.Pow(d1, d2);
@@ -207,15 +191,13 @@ namespace Calculator.Math
         /// <typeparam name="T">约束类型结构为值类型</typeparam>
         /// <param name="a">第一个类型为T的数字</param>
         /// <returns>返回T类型的倒数字符串结果</returns>
-        public static string Reciprocal<T>(T a) where T : struct
-        {
+        public static string Reciprocal<T>(T a) where T : struct{
             dynamic d1 = a;
             dynamic d2 = 0;
             dynamic d3 = 1;
 
             string Tempstring = Convert.ToString(d1);
-            if (Tempstring.IndexOf('.') != -1)
-            {
+            if (Tempstring.IndexOf('.') != -1){
                 // 拆分小数和整数
                 string part1 = Tempstring.Substring(0, Tempstring.IndexOf('.'));
                 string part2 = Tempstring.Substring(Tempstring.IndexOf('.') + 1, Tempstring.Length - 1 - Tempstring.IndexOf('.'));
@@ -225,21 +207,106 @@ namespace Calculator.Math
 
                 return Convert.ToString(d2) + "/" + Convert.ToString(d3);
             }
-            else
-            {
+            else{
                 return "1" + "/" + Convert.ToString(d1);
             }
         }
+
+        /// <summary>
+        /// 高精度乘法（目前最多支持10000000位的数字）
+        /// </summary>
+        /// <param name="First">第一个数字的每一位组成的数组集合</param>
+        /// <param name="Second">第二个数字的每一位组成的数组集合</param>
+        /// <returns>计算结果</returns>
+        public static int[] HighPrecisionMultiplication( int[] First, int[] Second ) {
+
+            Array.Reverse( First );
+            Array.Reverse( Second );
+
+            int[] Result = new int[10000000];
+            int P_Index = 0;
+            for (int Loop1 = 0; Loop1 < Second.Length; Loop1++){
+                P_Index = Loop1;
+                for (int Loop2 = 0; Loop2 < First.Length; Loop2++){
+                    int _x1 = First[Loop2] * Second[Loop1];
+                    if (_x1 > 9){
+                        while (_x1 > 9){
+                            Result[P_Index] += (_x1 % 10);
+                            _x1 /= 10;
+                            Result[P_Index + 1] += _x1;
+                        }
+                    }
+                    else{
+                        Result[P_Index] += _x1;
+                        while (Result[P_Index] > 9){
+                            int _temp = Result[P_Index];
+                            Result[P_Index] = _temp % 10;
+                            Result[P_Index + 1] += _temp / 10;
+                        }
+                    }
+
+                    P_Index++;
+                }
+            }
+
+            return Result;
+        }
+
+        /// <summary>
+        /// 高精度加法（目前最多支持10000000位的数字）
+        /// </summary>
+        /// <param name="First">第一个数字的每一位组成的数组集合</param>
+        /// <param name="Second">第二个数字的每一位组成的数组集合</param>
+        /// <returns>计算结果</returns>
+        public static int[] HighPrecisionAdd( int[] First, int[] Second )
+        {
+            int P_Index = 0;
+            int[] Result = new int[10000];
+            int max = First.Length > Second.Length ? First.Length : Second.Length;
+
+            int[] Temp1 = new int[max];
+            int[] Temp2 = new int[max];
+
+            for (int i = 0; i < First.Length; i++){
+                Temp1[i] = First[i];
+            }
+
+            for (int i = 0; i < Second.Length; i++){
+                Temp2[i] = Second[i];
+            }
+
+            for (int Loop = 0; Loop < max; Loop++) {
+                int _x1 = Temp1[Loop] + Temp2[Loop];
+                if (_x1 > 9){
+                    while (_x1 > 9){
+                        Result[P_Index] += (_x1 % 10);
+                        _x1 /= 10;
+                        Result[P_Index + 1] += _x1;
+                    }
+                }
+                else{
+                    Result[P_Index] += _x1;
+                    while (Result[P_Index] > 9){
+                        int _temp = Result[P_Index];
+                        Result[P_Index] = _temp % 10;
+                        Result[P_Index + 1] += _temp / 10;
+                    }
+                }
+
+                P_Index++;
+            }
+
+            return Result;
+        }
     }
 
-    class MathematicalMatching : Mathematics
-    {
+    class MathematicalMatching : Mathematics{
+
         /// <summary>
         /// MathemationMatching子类的构造函数，使用关键字base调用Mathematics基类的构造函数
         /// </summary>
         /// <param name="symbol">需要匹配的字符串</param>
-        MathematicalMatching( string symbol ):base()
-        {
+        MathematicalMatching( string symbol ):base(){
             this._Symbol = symbol;
         }
 
@@ -248,15 +315,12 @@ namespace Calculator.Math
         private string _Symbol;
         
         // 属性
-        public string Symbol
-        {
-            get
-            {
+        public string Symbol{
+            get{
                 return _Symbol;
             }
 
-            set
-            {
+            set{
                 _Symbol = value;
             }
         }
@@ -268,12 +332,12 @@ namespace Calculator.Math
         // ------------------------------------------------------------------------------------------------------
         // ---------------------------------------- 第一个版本（手动写栈）---------------------------------------
         // ------------------------------------------------------------------------------------------------------
-        class DefineStack
-        {
+        class DefineStack{
+
             // 字段
-            private int _Stack_Top  = -1;          // 栈顶
-            private int _Stack_Max  = 10;          // 栈的容量
-            private object[] _Data;                // 存取数据的数组
+            private int _Stack_Top  = -1;                       // 栈顶
+            private int _Stack_Max  = 10;                       // 栈的容量
+            private object[] _Data;                             // 存取数据的数组
 
             // 属性
             public int StackTop
@@ -317,8 +381,7 @@ namespace Calculator.Math
             /// 判断栈结构是不是满
             /// </summary>
             /// <returns></returns>
-            bool isFull()
-            {
+            bool isFull(){
                 if (_Stack_Top >= _Stack_Max)
                     return true;
                 return false;
@@ -328,8 +391,7 @@ namespace Calculator.Math
             /// 判断栈结构是不是空
             /// </summary>
             /// <returns></returns>
-            bool isEmpty()
-            {
+            bool isEmpty(){
                 if (_Stack_Top == -1)
                     return true;
                 return false;
@@ -339,14 +401,11 @@ namespace Calculator.Math
             /// 向栈结构中加数据
             /// </summary>
             /// <param name="c">数据</param>
-            void Push_Back(char c)
-            {
-                if (!isFull())
-                {
+            void Push_Back(char c){
+                if (!isFull()){
                     _Data[_Stack_Top++] = c;
                 }
-                else
-                {
+                else{
                     throw new Exception("栈结构已满");
                 }
             }
@@ -355,14 +414,11 @@ namespace Calculator.Math
             /// 从栈结构中取数据
             /// </summary>
             /// <returns></returns>
-            char Pop_Back()
-            {
-                if (!isEmpty())
-                {
+            char Pop_Back(){
+                if (!isEmpty()){
                     return (char)(_Data[_Stack_Top--]);
                 }
-                else
-                {
+                else{
                     throw new Exception("栈结构没有数据（null）");
                 }
             }
@@ -370,8 +426,7 @@ namespace Calculator.Math
             /// <summary>
             /// 释放数组
             /// </summary>
-            void Dispose()
-            {
+            void Dispose(){
                 if(_Data!=null)
                     _Data = null; 
             }
